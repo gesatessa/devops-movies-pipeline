@@ -52,5 +52,5 @@ jobs:
         git config user.name "GHA bot"
         git config user.email "actions@github.com"
         git add k8s/manifests/frontend.yaml
-        git commit -m "[ci] update image tag to ${{ steps.vars.outputs.SHORT_SHA }} (triggered by: ${{ github.actor }})" || echo "No changes to commit"
+        git commit -m "[ci skip] update image tag to ${{ steps.vars.outputs.SHORT_SHA }} (triggered by: ${{ github.actor }})" || echo "No changes to commit"
         git push
